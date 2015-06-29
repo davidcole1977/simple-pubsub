@@ -1,0 +1,39 @@
+{
+  "name": "simple-pubsub",
+  "version": "0.0.1",
+  "description": "A basic Javascript publish / subscribe module",
+  "main": "lib/simple-pubsub.js",
+  "scripts": {
+    "test": "grunt dist --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidcole1977/simple-pubsub.git"
+  },
+  "keywords": [
+    "pubsub",
+    "publish",
+    "subscribe",
+    "observer"
+  ],
+  "author": "David Cole",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/davidcole1977/simple-pubsub/issues"
+  },
+  "homepage": "https://github.com/davidcole1977/simple-pubsub",
+  "devDependencies": {
+    "chai": "2.3.x",
+    "grunt": "0.4.x",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "0.11.x",
+    "grunt-contrib-uglify": "0.9.x",
+    "grunt-contrib-watch": "0.6.x",
+    "grunt-coveralls": "^1.0.0",
+    "grunt-env": "^0.4.4",
+    "grunt-istanbul": "^0.6.1",
+    "grunt-mocha-test": "0.12.x",
+    "lodash": "^3.9.2",
+    "mocha": "2.2.x"
+  }
+}
