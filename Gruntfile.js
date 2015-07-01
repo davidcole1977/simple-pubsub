@@ -169,7 +169,7 @@ module.exports = function(grunt) {
     'mochaTest',
     'uglify',
     'coverage',
-    'env:dist'
+    'env:dist' // reset to previous value so we're testing against uninstrumented code
   ]);
 
   grunt.registerTask('default', [
