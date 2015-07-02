@@ -12,3 +12,4 @@ A basic Javascript publish / subscribe module
 ### publish(topic, data)
 
 ### getSubscriptionCount(topic)
+
