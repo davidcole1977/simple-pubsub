@@ -1,18 +1,5 @@
 module.exports = function(grunt) {
 
-  /**
-   * Takes a 'vanilla' JS module and replaces "var moduleName =" with "module.exports =""
-   * to turn it into a Node module 
-   */
-  // grunt.registerMultiTask('modulify', function () {
-  //   var moduleContents = grunt.file.read(this.files[0].src[0]),
-  //       moduleName = this.options().moduleName,
-  //       dest = this.files[0].dest;
-
-  //   moduleContents = moduleContents.replace('var ' + moduleName, 'module.exports');
-  //   grunt.file.write(dest, moduleContents);
-  // });
-
   grunt.registerMultiTask('simple_log', function () {
     var logText = this.options().logText;
 
@@ -30,24 +17,11 @@ module.exports = function(grunt) {
       }
     },
 
-    // modulify: {
-    //   scaleMaker: {
-    //     options: {
-    //       moduleName: 'ScaleMaker'
-    //     },
-    //     src: ['lib/scaleMaker.js'],
-    //     dest: 'lib/node/scaleMaker.js'
-    //   }
-    // },
-
     jshint: {
       options: {
         expr: true,
         ignores: ['test/coverage/**/*.js']
       },
-      // demoJs: {
-      //   src: ['demo/js/*.js']
-      // },
       js: {
         src: ['lib/**/*.js', '!lib/**/*.min.js']
       },
@@ -165,7 +139,6 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', [
     'env:dist',
     'jshint',
-    // 'modulify',
     'mochaTest',
     'uglify',
     'coverage',
